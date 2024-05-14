@@ -1,7 +1,7 @@
-import { Days } from './Days/Days';
+import { Days } from './components/Days/Days';
 import style from './Home.module.scss';
-import { ThisDay } from './ThisDay/ThisDay';
-import { ThisDayInfo } from './ThisDayInfo/ThisDayInfo';
+import { ThisDay } from './components/ThisDay/ThisDay';
+import { ThisDayInfo } from './components/ThisDayInfo/ThisDayInfo';
 
 interface Props {}
 

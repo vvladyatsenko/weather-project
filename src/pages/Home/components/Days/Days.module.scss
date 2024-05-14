@@ -36,14 +36,15 @@
     margin-bottom: 12px;
   }
 
-  .temp__day {
-    font-size: 18px;
-  }
-
   .temp__day,
   .temp__night {
     font-size: 13px;
     color: $base-color;
+  }
+
+  .temp__day {
+    font-size: 18px;
+    color: #000000;
   }
 
   .temp__night {
