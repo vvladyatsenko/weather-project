@@ -8,7 +8,7 @@ export const ThisDay = (props: Props) => {
     <div className={style.this__day}>
       <div className={style.top__block}>
         <div className={style.top__block_wrapper}>
-          <div className={style.this__temp}>20*</div>
+          <div className={style.this__temp}>20°</div>
           <div className={style.this__day_name}>Today</div>
         </div>
         <GlobalSvgSelector id={'sun'} />
