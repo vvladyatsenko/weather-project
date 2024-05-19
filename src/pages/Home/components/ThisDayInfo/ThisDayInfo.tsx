@@ -14,6 +14,10 @@ export interface Item {
 }
 
 export const ThisDayInfo = ({ weather }: Props) => {
+  if (!weather || !weather.main) {
+    return <div>Loading...</div>;
+  }
+
   const items: Item[] = [
     {
       icon_id: 'temp',

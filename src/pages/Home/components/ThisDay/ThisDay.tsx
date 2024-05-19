@@ -41,6 +41,10 @@ export const ThisDay = ({ weather }: Props) => {
     }
   };
 
+  if (!weather || !weather.main) {
+    return <div>Loading...</div>;
+  }
+
   const iconId = getWeatherIcon(weather.weather[0].icon);
   const currentTime = moment().format('HH:mm');
   const currentDate = moment().format('DD.MM.YYYY');
