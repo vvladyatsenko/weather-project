@@ -11,30 +11,30 @@ export const ThisDay = ({ weather }: Props) => {
   const getWeatherIcon = (icon: string) => {
     switch (icon) {
       case '01d': // Ясно (день)
-      case '01n': // Ясно (ночь)
+      case '01n': // Ясно (ніч)
         return 'sun';
-      case '02d': // Небольшая облачность (день)
-      case '02n': // Небольшая облачность (ночь)
+      case '02d': // Невелика хмарність (день)
+      case '02n': // Невелика хмарність (ніч)
         return 'mainly_cloudy';
-      case '03d': // Облачно
-      case '03n': // Облачно
-      case '04d': // Сильная облачность
-      case '04n': // Сильная облачность
+      case '03d': // Хмарно
+      case '03n': // Хмарно
+      case '04d': // Сильна хмарність
+      case '04n': // Сильна хмарність
         return 'mainly_cloudy';
-      case '09d': // Мелкий дождь (день)
-      case '09n': // Мелкий дождь (ночь)
+      case '09d': // Невеликий дощ (день)
+      case '09n': // Невеликий дощ (ніч)
         return 'small_rain';
-      case '10d': // Дождь (день)
-      case '10n': // Дождь (ночь)
+      case '10d': // Дощ (день)
+      case '10n': // Дощ (ніч)
         return 'rain';
       case '11d': // Гроза (день)
-      case '11n': // Гроза (ночь)
+      case '11n': // Гроза (ніч)
         return 'storm';
-      case '13d': // Снег (день)
-      case '13n': // Снег (ночь)
+      case '13d': // Сніг (день)
+      case '13n': // Сніг (ніч)
         return 'snow';
       case '50d': // Туман (день)
-      case '50n': // Туман (ночь)
+      case '50n': // Туман (ніч)
         return 'mist';
       default:
         return 'sun';
@@ -51,7 +51,7 @@ export const ThisDay = ({ weather }: Props) => {
         return 'Харків';
       case 'Kyiv':
         return 'Київ';
-      case 'Odessa':
+      case 'Odesa':
         return 'Одеса';
       case 'Dnipro':
         return 'Дніпро';

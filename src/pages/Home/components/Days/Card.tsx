@@ -7,11 +7,11 @@ interface Props {
 }
 
 export const Card = ({ day }: Props) => {
-  const { day_info, icon_id, temp_day, temp_night } = day;
+  const { day: dayName, day_info, icon_id, temp_day, temp_night } = day;
 
   return (
     <div className={style.card}>
-      <div className={style.day}>{day.day}</div>
+      <div className={style.day}>{dayName}</div>
       <div className={style.day__info}>{day.day_info}</div>
       <div className={style.img}>
         <GlobalSvgSelector id={day.icon_id} />
