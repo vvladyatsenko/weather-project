@@ -8,7 +8,9 @@ function App() {
     <div className="global-container">
       {/* <Popup /> */}
       <div className="container">
-        <Header />
+        {/* <Header onCityChange={function (city: string): void {
+          throw new Error('Function not implemented.');
+        } } /> */}
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
@@ -16,5 +18,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

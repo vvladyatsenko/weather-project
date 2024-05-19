@@ -1,18 +1,32 @@
-import { GlobalSvgSelector } from '../../pages/assets/icons/global/GlobalSvgSelector';
-import style from './Header.module.scss';
+import { useState } from 'react';
 import Select from 'react-select';
+import { GlobalSvgSelector } from '../../pages/assets/icons/global/GlobalSvgSelector';
 import { useTheme } from '../../hooks/useTheme';
 import { Theme } from '../../context/ThemeContext';
+import style from './Header.module.scss';
 
-interface Props {}
+interface Props {
+  onCityChange: (city: string) => void;
+}
 
-export const Header = (props: Props) => {
+export const Header = ({ onCityChange }: Props) => {
   const theme = useTheme();
+  const [selectedCity, setSelectedCity] = useState({
+    value: 'Kharkiv',
+    label: 'Харьков',
+  });
 
   const options = [
-    { value: 'city-1', label: 'Киев' },
-    { value: 'city-2', label: 'Харьков' },
-    { value: 'city-3', label: 'Львов' },
+    { value: 'Kharkiv', label: 'Харків' },
+    { value: 'Kyiv', label: 'Київ' },
+    { value: 'Odessa', label: 'Одеса' },
+    { value: 'Dnipro', label: 'Дніпро' },
+    { value: 'Zaporizhzhia', label: 'Запоріжжя' },
+    { value: 'Lviv', label: 'Львів' },
+    { value: 'Mykolaiv', label: 'Миколаїв' },
+    { value: 'Vinnytsia', label: 'Вінниця' },
+    { value: 'Kherson', label: 'Херсон' },
+    { value: 'Chernihiv', label: 'Чернігів' },
   ];
 
   const colorStyles = {
@@ -24,13 +38,18 @@ export const Header = (props: Props) => {
       height: '37px',
       border: 'none',
       borderRadius: '10px',
+      cursor: 'pointer',
       zIndex: 100,
     }),
-
     singleValue: (styles: any) => ({
       ...styles,
       color: theme.theme === Theme.DARK ? '#ffffff' : '#000000',
     }),
+  };
+
+  const handleCityChange = (selectedOption: any) => {
+    setSelectedCity(selectedOption);
+    onCityChange(selectedOption.value);
   };
 
   function changeTheme() {
@@ -50,9 +69,11 @@ export const Header = (props: Props) => {
           <GlobalSvgSelector id={'change-theme'} />
         </div>
         <Select
-          defaultValue={options[1]}
+          defaultValue={selectedCity}
           styles={colorStyles}
           options={options}
+          onChange={handleCityChange}
+          value={selectedCity}
         />
       </div>
     </header>
