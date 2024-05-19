@@ -14,7 +14,7 @@ export interface Item {
 }
 
 export const ThisDayInfo = ({ weather }: Props) => {
-  if (!weather || !weather.main) {
+  if (!weather || !weather.main || !weather.wind) {
     return <div>Loading...</div>;
   }
 
