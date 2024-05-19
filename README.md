@@ -1,3 +1,15 @@
+Прогноз погоды с использованием React, TypeScript и Redux Toolki.
+
+React: Библиотека для построения пользовательских интерфейсов.
+TypeScript: Надстройка JavaScript, обеспечивающая типизацию.
+Redux Toolkit: Упрощенная работа с глобальным состоянием приложения.
+Axios: Библиотека для выполнения HTTP-запросов.
+Moment.js: Библиотека для работы с датами и временем.
+React-Select: Библиотека для создания настраиваемых выпадающих списков.
+CSS Modules: Использование CSS-модулей для стилизации компонентов.
+Смена темы с сохранением в LocalStorage.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
